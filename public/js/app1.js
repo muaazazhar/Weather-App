@@ -10,7 +10,8 @@ const message1 = document.querySelector('#message-1')
 
 const forecast=(address)=>{
     message0.textContent= 'Loading Weather....!'
-    fetch('http://localhost:3000/weather?address='+address+'').then((response)=>{
+    //fetch('http://localhost:3000/weather?address='+address+'').then((response)=>{ For local host
+    fetch('/weather?address='+address+'').then((response)=>{  
         response.json().then((data)=>{
             if(data.error){
                 message0.textContent= data.error

@@ -7,6 +7,7 @@ const { send } = require('process')
 const weatherrequest = require('./utils/forecast')
 
 const app = express()
+const port= process.env.PORT || 3000
 //Express config
 const publicDirectorypath = path.join(__dirname,'../public')
 const viewsPath = path.join(__dirname, '../template/views') 
@@ -91,6 +92,6 @@ app.get('*',(req,res)=>{
         name:' Muaaz'
     })
 })
-app.listen(3000,()=>{
-    console.log('Server Is Up In Running')
+app.listen(port,()=>{
+    console.log('Server Is Up In Running ON Port :' + port)
 })
