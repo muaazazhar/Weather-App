@@ -9,7 +9,7 @@ const weatherrequest = (Longitude,Lattitude,callback)=>{
         }else{
             callback(undefined,'Current Temprature IS '+body.current.temperature+' degrees out. '+
                 ' And It Feels Like '+body.current.feelslike+' degrees '+
-                ' And Its '+body.current.weather_descriptions[0])
+                ' And Its '+body.current.weather_descriptions[0]+'. And Humidity is '+body.current.humidity)
         }
     })
 }
